@@ -22,9 +22,9 @@ RUN git clone --depth 1 https://github.com/ULHPC/tutorials /opt/tutorials && \
     ln -s ref.d/scripts  . && \
     mkdir src && \
     cd src && \
-    export OSU_VERSION=7.5 && \
-    wget --no-check-certificate http://mvapich.cse.ohio-state.edu/download/mvapich/osu-micro-benchmarks-${OSU_VERSION}.tgz && \
-    tar xf osu-micro-benchmarks-${OSU_VERSION}.tgz && \
+    export OSU_VERSION=7.5-1 && \
+    wget https://mvapich.cse.ohio-state.edu/download/mvapich/osu-micro-benchmarks-${OSU_VERSION}.tar.gz && \
+    tar xf osu-micro-benchmarks-${OSU_VERSION}.tar.gz && \
     cd /opt/osu-benchmark && \
     # Compile based on openmpi
     mkdir -p build.openmpi && cd build.openmpi && \
